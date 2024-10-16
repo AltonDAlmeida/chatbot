@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation Chatbot</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/app.js"></script>
+<script src="/js/bot.js"></script>
+</head>
+<body>
+    <header><a href="/index.html" target="_self">
+        <h1>H B C</h1> </a>
+    </header>
+    <br><br><br>
+    <main>
+
+    <div id="forms">
+    <section class="reservation-form">
+        <h2>Manual Reservation Form</h2>
+        <form id="reservationForm" method="POST">
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" name="roomType" required>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="suite">Suite</option>
+            </select>
+<br>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="8" required>
+<br>
+            <label for="checkIn">Check-in Date:</label>
+            <input type="date" id="checkIn" name="checkIn" required>
+<br>
+            <label for="checkOut">Check-out Date:</label>
+            <input type="date" id="checkOut" name="checkOut" required>
+<br><br>
+            <button type="submit">Book Now</button>
+        </form>
+        <p id="formResponse"></p>
+    </section>
+    </div>
+    <div class="chatbot">
+        <iframe
+            allow="microphone;"
+            width="350"
+            height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/6ed73f65-28fb-4599-9a66-afad88ba0941">
+        </iframe></div>
+
+    </main>
+    <footer>
+    
+        
+    </footer>
+</body>
+</html>
